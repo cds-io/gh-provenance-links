@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Provenance Links",
+  "version": "0.1.0",
+  "description": "Make provenance comments (Report:, Issue:, PR:, bare URLs) clickable in GitHub's source view, which otherwise renders them as plain text.",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
